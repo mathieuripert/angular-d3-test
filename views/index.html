@@ -1,2 +1,8 @@
-<h1>Test</h1>
-{{test}}
+<h3>AngelList jobs</h3>
+{{jobs.length}} jobs found
+
+<ul ng-if="page == total">
+	<li ng-repeat="job in jobs track by $index">
+		<b>{{job.title}}</b> - {{ (job.salary_min + job.salary_max) / 2 }}
+	</li>
+</ul>
